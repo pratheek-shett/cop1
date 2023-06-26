@@ -479,9 +479,9 @@ class _StudentAtState extends State<StudentAt> {
                                                 ],
                                               ),
                                               child: IconButton(
-                                                icon: Icon(Icons.mode_edit_rounded),
+                                                icon: Icon(Icons.mode_edit_rounded), //EDIT BUTTON 
                                                 onPressed: () {
-                                                  showDialog(
+                                                  showDialog(   //POPS UP IT SHOULD DISPLAY ITS VALUE WHEN OPENED TO EDIT
                                                     context: context,
                                                     builder: (context) {
                                                       return Flex(
@@ -554,7 +554,7 @@ class _StudentAtState extends State<StudentAt> {
                                                                         ),
                                                                       ),
                                                                       SizedBox(height: 20.0),
-                                                                      TypeAheadFormField<String>(
+                                                                      TypeAheadFormField<String>(  //IT USED TO FETCH EVENT NAME FROM EVENT NAME GET API WHICH IS ABOVE CALLED fetchdata()
                                                                         textFieldConfiguration: TextFieldConfiguration(
                                                                           controller: selectedEventController,
                                                                           decoration: InputDecoration(
@@ -604,12 +604,12 @@ class _StudentAtState extends State<StudentAt> {
                                                                       ),
                                                                       SizedBox(height: 20.0),
                                                                       ElevatedButton(
-                                                                        onPressed: _saveForm,
+                                                                       onPressed: (){},
                                                                         style: ElevatedButton.styleFrom(
                                                                           primary: Color(0xffF9B429),
                                                                           onPrimary: Colors.black,
                                                                         ),
-                                                                        child: Text('Submit'),
+                                                                        child: Text('Save'),
                                                                       ),
                                                                     ],
                                                                   ),
@@ -661,8 +661,8 @@ class _StudentAtState extends State<StudentAt> {
                                       ),
                                     ),*/
                                     /* SizedBox(height: 20.0),*/
-                                    Padding(
-                                      padding: EdgeInsets.symmetric(vertical: 5.0),
+                                    Padding( 
+                                      padding: EdgeInsets.symmetric(vertical: 5.0),  //These are the data showned in rounded dialog when list is clicked
                                       child: Text(
                                         'Student: ${event['name'] ?? ''}',
                                         style: TextStyle(
